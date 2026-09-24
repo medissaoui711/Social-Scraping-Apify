@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', 'Tajawal', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    /* Backgrounds */
+    --bg-base: #050505;
+    --bg-surface: #090909;
+    --bg-surface-elevated: #111111;
+    --bg-panel: #1C1C1C;
+
+    /* Text */
+    --text-primary: #EAEAEA;
+    --text-secondary: #B0B0B0;
+    --text-tertiary: #757575;
+
+    /* Borders */
+    --border-main: #242424;
+    --border-subtle: #181818;
+
+    /* Accent (Emerald) */
+    --primary: #00FF9C;
+    --primary-hover: #00E68D;
+    --primary-pressed: #00CC7D;
+    --primary-glow: rgba(0, 255, 156, 0.15);
+
+    /* Status */
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+    --info: #3B82F6;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    line-height: 1.55;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Arabic typography line-height & weight balance */
+  [dir="rtl"], [lang="ar"] {
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Universal accessible focus outline */
+  *:focus-visible {
+    outline: 2px solid #00FF9C;
+    outline-offset: 2px;
+  }
+}
+
+/* Typography Scale Classes */
+.text-display-ar {
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.text-display-en {
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+.text-h1-ar {
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+.text-h1-en {
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+.text-h2-ar {
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+.text-h2-en {
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+.text-body-ui {
+  font-size: 15px;
+  line-height: 1.6;
+}
+.text-small-ui {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Elegant Dark Technical Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #242424;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00FF9C;
+}
+
+/* Elegant Dark Terminal Grid & Dots Pattern */
+.bg-cyber-grid {
+  background-color: #050505;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.bg-dot-matrix {
+  background-image: radial-gradient(#222222 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.bg-radial-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(0, 255, 156, 0.07), transparent 60%);
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+

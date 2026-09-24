@@ -1,0 +1,6 @@
+{
+  "name": "OSIRIS-X — Social Scraping & Intelligence Control Hub",
+  "description": "A unified catalog, live playground, and pipeline orchestrator for 3,268+ social media data extraction tools and Apify actors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
